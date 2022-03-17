@@ -19,10 +19,11 @@ public class Main {
 
   public static void main(String[] args) {
     DataSource dataSource = DataSourceConfig.createDataSource();
+    Random rand = new Random();
 
     DSL.using(dataSource, POSTGRES)
       .insertInto(AUTHOR)
-      .set(AUTHOR.ID, 1)
+      .set(AUTHOR.ID, rand.nextInt(1000))
       .set(AUTHOR.FIRST_NAME, "first_name")
       .set(AUTHOR.LAST_NAME, "last_name")
       .execute();
