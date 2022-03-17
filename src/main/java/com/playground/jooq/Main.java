@@ -12,6 +12,7 @@ import static org.jooq.sources.tables.Author.AUTHOR;
 import org.jooq.sources.tables.records.AuthorRecord;
 
 import javax.sql.DataSource;
+import java.util.Random;
 
 @Slf4j
 public class Main {
@@ -19,6 +20,12 @@ public class Main {
   public static void main(String[] args) {
     DataSource dataSource = DataSourceConfig.createDataSource();
 
+    DSL.using(dataSource, POSTGRES)
+      .insertInto(AUTHOR)
+      .set(AUTHOR.ID, 1)
+      .set(AUTHOR.FIRST_NAME, "first_name")
+      .set(AUTHOR.LAST_NAME, "last_name")
+      .execute();
 
     AuthorRecord authorRecord = DSL.using(dataSource, POSTGRES)
       .selectFrom(AUTHOR)
