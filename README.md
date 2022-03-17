@@ -9,8 +9,11 @@
 
 ## how to run
 1. build the project throught codegen plugin
+2. 
    ![step_1](https://user-images.githubusercontent.com/37922672/158750658-1cf5529e-98a3-4d87-93ae-f8ecb44c3fe0.png)
+   
    if build success, dir `target` would be generated
+   
    ![image](https://user-images.githubusercontent.com/37922672/158752597-688d16f0-c7d4-49a6-b152-2729967119c8.png)
 
 2. mark as generated sources root `target/generated-sources/jooq` 
@@ -18,6 +21,7 @@
    - mark directory as
    - click `Generated Sources Root`
    after mark jooq as `generated sources root`
+   
    ![image](https://user-images.githubusercontent.com/37922672/158752666-ac89a4cc-637f-42a3-ad66-b8d659e3d880.png)
 
 
